@@ -1,11 +1,40 @@
 package com.example.kotlinlang
 
+
+// loops and functions in kotlin
+
+fun showMsg(first: Int , second: Int ,msg:String ): Int {
+
+    var i :Int = 123
+
+    for(i in first..second)
+    {
+        println("msg is $msg at index $i")
+    }
+    return i
+}
 fun main()
 {
 
+    println(showMsg(1,100,"Hello"))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     // if and statements in Kotlin
-    var num = 10
+   /* var num = 10
 
 
     if(num>=1000)
@@ -30,20 +59,7 @@ fun main()
             println("Out of Bound")
         }
 
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
+    }*/
 
 
 
