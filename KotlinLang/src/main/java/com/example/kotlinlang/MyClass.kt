@@ -2,7 +2,55 @@ package com.example.kotlinlang
 
 fun main()
 {
-    // var mutable
+
+
+    // if and statements in Kotlin
+    var num = 10
+
+
+    if(num>=1000)
+    {
+        println("Good")
+    }
+    else
+    {
+        println("Bad")
+    }
+
+
+    val amount = 1222
+
+    when (amount)
+    {
+        in 10..1000 -> println("Good Number")
+        !in 10..1234 -> println("Not included")
+        1234 -> println("Nice approach")
+        else ->
+        {
+            println("Out of Bound")
+        }
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*// var mutable
     // val immutable
 
 
@@ -30,7 +78,7 @@ fun main()
     println(num5)
 
     val str: String = "Hello"
-    println(str)
+    println(str)*/
 
 
 
