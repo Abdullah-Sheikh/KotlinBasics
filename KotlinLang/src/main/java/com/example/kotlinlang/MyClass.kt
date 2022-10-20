@@ -1,36 +1,33 @@
 package com.example.kotlinlang
 
 
-// loops and functions in kotlin
-
-fun showMsg(first: Int , second: Int ,msg:String ): Int {
-
-    var i :Int = 123
-
-    for(i in first..second)
-    {
-        println("msg is $msg at index $i")
-    }
-    return i
-}
-
-
-val trick =
-{
-    println("No treats!")
-}
-
-// val LambdaNName : Type  = {ParameterList -> body }
-
-val add : (Int ,Int ) -> Int = { a,b -> a+b}
-
-// trailing lambda
-fun enhancedMessage (message: String, functionasParameter : ()->Int){
-    println("$message  ${functionasParameter()}")
-}
 
 fun main()
 {
+
+    // A collection usually contain a number of objects/elements in a certain order of the same type
+
+    val collection1 = mutableListOf(12,13,645,34)
+    val collection2 = listOf("James", "Nancy", "John", "Sarah")
+
+    print(collection1)
+
+    for (i in collection2)
+    {
+        println("Names: $i")
+    }
+
+    collection1.forEach{
+        println("Num: $it")
+    }
+
+
+
+
+
+
+
+
 
 
     //Functions in Kotlin are first-class constructs and can be treated like data types.
@@ -39,6 +36,7 @@ fun main()
     // You can return a function type from another function.
 
     // store a function in a variable
+/*
 
     val trickFunction = trick
     trick()
@@ -48,13 +46,7 @@ fun main()
         add(12,7)
     }
 
-
-
-
-
-
-
-
+*/
 
 
    // println(showMsg(1,100,"Hello"))
@@ -129,4 +121,32 @@ fun main()
 
 
 
+}
+
+// loops and functions in kotlin
+
+fun showMsg(first: Int , second: Int ,msg:String ): Int {
+
+    var i :Int = 123
+
+    for(i in first..second)
+    {
+        println("msg is $msg at index $i")
+    }
+    return i
+}
+
+
+val trick =
+    {
+        println("No treats!")
+    }
+
+// val LambdaNName : Type  = {ParameterList -> body }
+
+val add : (Int ,Int ) -> Int = { a,b -> a+b}
+
+// trailing lambda
+fun enhancedMessage (message: String, functionasParameter : ()->Int){
+    println("$message  ${functionasParameter()}")
 }
