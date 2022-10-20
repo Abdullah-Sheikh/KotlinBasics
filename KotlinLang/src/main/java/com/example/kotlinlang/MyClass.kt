@@ -13,10 +13,40 @@ fun showMsg(first: Int , second: Int ,msg:String ): Int {
     }
     return i
 }
+
+
+val trick =
+{
+    println("No treats!")
+}
+
+// val LambdaNName : Type  = {ParameterList -> body }
+
+val add : (Int ,Int ) -> Int = { a,b -> a+b}
+
+// trailing lambda
+fun enhancedMessage (message: String, functionasParameter : ()->Int){
+    println("$message  ${functionasParameter()}")
+}
+
 fun main()
 {
 
-    println(showMsg(1,100,"Hello"))
+
+    //Functions in Kotlin are first-class constructs and can be treated like data types.
+    // Lambda expressions provide a shorthand syntax to write functions.
+    // You can pass function types into other functions.
+    // You can return a function type from another function.
+
+    // store a function in a variable
+
+    val trickFunction = trick
+    trick()
+    trickFunction()
+
+    enhancedMessage("Hello There"){
+        add(12,7)
+    }
 
 
 
@@ -27,9 +57,7 @@ fun main()
 
 
 
-
-
-
+   // println(showMsg(1,100,"Hello"))
 
 
 
