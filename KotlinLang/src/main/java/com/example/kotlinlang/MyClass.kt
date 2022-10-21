@@ -17,21 +17,33 @@ interface  ClickEvent
 
 fun String.append (toappend : String) : String = this.plus(toappend)
 
+// data class in kotlin
+data class Person (val firstName:String ,val lastName: String , val age: Int )
+
 fun main()
 {
 
-     // extension functions
+   val  person  = Person("Abdullah","Sheikh", 22)
+    val  person1  = Person("Abdullah","Sheikh", 22)
+
+    val listofPersons = listOf(person, person1)
+
+    println(listofPersons)
+
+
+
+
+
+
+
+
+
+
+    // extension functions
     // Kotlin gives the programmer the ability to add more functionality to the existing classes,
     // without inheriting them. This is achieved through a feature known as extensions.
     // When a function is added to an existing class it is known as Extension Function.
-    println("Hello ".append(", How are you "))
-
-
-
-
-
-
-
+  //  println("Hello ".append(", How are you "))
 
 
 
