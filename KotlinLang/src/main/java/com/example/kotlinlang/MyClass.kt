@@ -2,10 +2,45 @@ package com.example.kotlinlang
 
 
 
+
+
+class Button (val label : String):ClickEvent{
+    override fun onClick(message: String) {
+        println("Clicked by  $label and $message")
+    }
+
+}
+interface  ClickEvent
+{
+    fun onClick(message:String)
+}
+
+fun String.append (toappend : String) : String = this.plus(toappend)
+
 fun main()
 {
 
-    // A collection usually contain a number of objects/elements in a certain order of the same type
+     // extension functions
+    // Kotlin gives the programmer the ability to add more functionality to the existing classes,
+    // without inheriting them. This is achieved through a feature known as extensions.
+    // When a function is added to an existing class it is known as Extension Function.
+    println("Hello ".append(", How are you "))
+
+
+
+
+
+
+
+
+
+
+/*
+    val btn = Button("Button")
+    btn.onClick("This is message")*/
+
+
+    /*// A collection usually contain a number of objects/elements in a certain order of the same type
 
     val collection1 = mutableListOf(12,13,645,34)
     val collection2 = listOf("James", "Nancy", "John", "Sarah")
@@ -20,7 +55,7 @@ fun main()
     collection1.forEach{
         println("Num: $it")
     }
-
+*/
 
 
 
